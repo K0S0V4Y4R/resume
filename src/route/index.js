@@ -285,9 +285,8 @@ router.get('/work', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    
     layout: 'bio',
-    
+
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
     birthplace:
@@ -369,12 +368,18 @@ router.get('/bio', function (req, res) {
           'Einstein explained the photoelectric effect, where electrons are emitted from a metal surface when it is illuminated by light.',
       },
     ],
-    contributions: {
-      title: 'Inventions',
-      description:
-        'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
-      year: 'Late 15th to early 16th century',
-      field: 'Invention',
+    contributions: [
+      {
+        title: 'Inventions',
+        description:
+          'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
+        year: 'Late 15th to early 16th century',
+        field: 'Invention',
+      },
+    ],
+    footer,
+  })
+})
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/person', function (req, res) {
@@ -472,14 +477,11 @@ router.get('/person', function (req, res) {
           ],
         },
       ],
-
     },
   })
 })
 
 // ================================================================
-
-
 
 // ================================================================
 
