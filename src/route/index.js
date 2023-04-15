@@ -285,8 +285,10 @@ router.get('/work', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'bio',
-
+    layout: 'basic',
+    page: {
+      title: 'Biography',
+    },
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
     birthplace:
@@ -385,8 +387,10 @@ router.get('/bio', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
-
+    layout: 'basic',
+    page: {
+      title: 'Person page',
+    },
     person: {
       name: 'Emma Johnson',
       age: 32,
