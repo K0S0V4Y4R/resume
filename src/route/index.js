@@ -285,12 +285,6 @@ router.get('/work', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-<<<<<<< HEAD
-    layout: 'basic',
-    page: {
-      title: 'Biography',
-    },
-=======
 
     page: {
       title: 'Biography',
@@ -298,7 +292,6 @@ router.get('/bio', function (req, res) {
 
     layout: 'basic',
 
->>>>>>> c78af5e77539c1caf33ddb2a939ccd3e3bbfc26b
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
     birthplace:
@@ -397,20 +390,10 @@ router.get('/bio', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-<<<<<<< HEAD
     layout: 'basic',
     page: {
       title: 'Person page',
     },
-=======
-    page: {
-
-      title: 'Resume | Person',
-
-    },
-    layout: 'basic',
-
->>>>>>> c78af5e77539c1caf33ddb2a939ccd3e3bbfc26b
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -636,7 +619,8 @@ router.get('/web', function (req, res) {
           ],
         },
       ],
-=======
+
+      
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -809,6 +793,112 @@ router.get('/js', function (req, res) {
 })
 
 // ================================================================
+
+
+router.get('/car', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('car', {
+    layout: 'basic',
+    page: {
+      title: 'Page CARS',
+    },
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+
 
 // Підключаємо роутер до бек-енду
 module.exports = router
