@@ -285,7 +285,6 @@ router.get('/work', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-
     page: {
       title: 'Biography',
     },
@@ -490,7 +489,6 @@ router.get('/person', function (req, res) {
 
 // ================================================================
 
-
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -619,8 +617,10 @@ router.get('/web', function (req, res) {
           ],
         },
       ],
+    },
+  })
+})
 
-      
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -702,7 +702,6 @@ router.get('/program', function (req, res) {
           },
         ],
       },
-
     },
   })
 })
@@ -718,7 +717,7 @@ router.get('/js', function (req, res) {
       title: 'JavaScript',
     },
     layout: 'basic',
-    
+
     name: 'JavaScript',
     description:
       'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
@@ -793,7 +792,6 @@ router.get('/js', function (req, res) {
 })
 
 // ================================================================
-
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -897,8 +895,6 @@ router.get('/car', function (req, res) {
 })
 
 // ================================================================
-
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
